@@ -1,0 +1,101 @@
+.img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #0f172a;
+}
+
+/* общий контейнер */
+.list {
+  padding: 40px;
+}
+
+/* сетка карточек */
+.ota {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* карточка */
+.card {
+  width: 260px;
+  background: #1e293b;
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover эффект */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* место под изображение */
+.card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(135deg, #334155, #475569);
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* текст */
+.card h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #cbd5f5;
+}
+
+/* наличие */
+.card p:last-child {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* декоративные кружки */
+.card i {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+}
+
+.card i:nth-child(1) {
+  top: -20px;
+  right: -20px;
+}
+
+.card i:nth-child(2) {
+  bottom: -30px;
+  left: -20px;
+}
+
+.card i:nth-child(3) {
+  bottom: 10px;
+  right: 20px;
+}
